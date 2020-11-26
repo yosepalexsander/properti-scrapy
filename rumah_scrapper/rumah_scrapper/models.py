@@ -18,7 +18,7 @@ def init_db(engine):
 class Properti(Base):
     """Sqlalchemy model for Rumah data"""
 
-    __tablename__ = "properti"
+    __tablename__ = "rumah"
 
     id = Column(Integer, primary_key=True)
     property_id = Column("property_id", BigInteger, unique=True)

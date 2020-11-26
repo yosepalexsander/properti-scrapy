@@ -26,7 +26,7 @@ class RumahSpider(Spider):
         super(RumahSpider, self).__init__(*args, **kwargs)
         self.iklan = iklan
         self.properti = properti
-        # self.start_urls = [f"https://www.99.co/id/{iklan}/{properti}"]
+        # self.start_urls = [f"https://www.99.co/id/{iklan}/{properti}?urut=2"]
         self.page_count = 0
         self.max_page = int(max_page)
 
@@ -34,9 +34,9 @@ class RumahSpider(Spider):
         user_agent = get_random_ua()
         for i in range(self.page_count, self.max_page, 1):
             yield Request(
-                url=f"https://www.99.co/id/{self.iklan}/{self.properti}?hlmn={i}",
+                url=f"https://www.99.co/id/{self.iklan}/{self.properti}?urut=2&hlmn={i}",
                 callback=self.parse,
-                headers={"Referer": "same-origin", "user-agent": user_agent},
+                headers={"user-agent": user_agent},
             )
 
     def parse(self, response):
