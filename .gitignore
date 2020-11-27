@@ -1,5 +1,6 @@
 # ignore all pycache files
-__pycache__/*py[cod]
+__pycache__/
+*.py[cod]
 
 # ignore env files
 .env

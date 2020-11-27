@@ -6,7 +6,7 @@ from rumah_scrapper.helpers import get_random_ua, string2integer
 
 
 class RumahSpider(Spider):
-    name = "properti_spider"
+    name = "rumah_spider"
     allowed_domains = ["99.co"]
 
     # custom_settings = {

@@ -13,7 +13,7 @@ NEWSPIDER_MODULE = "rumah_scrapper.spiders"
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 16
+# CONCURRENT_REQUESTS = 16
 
 # Configure database
 DATABASE = {
